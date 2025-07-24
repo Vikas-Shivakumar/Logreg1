@@ -63,7 +63,7 @@ if st.button("Predict Admission"):
         else:
             prob = model.predict(input_df)[0]  # fallback if model does not support probability
             st.warning("This model does not output probability. Interpreting raw class prediction.")
-            label = "Admit" if prob = 1 else "Reject"
+            label = "Admit" if prob == 1 else "Reject"
 
     
     
