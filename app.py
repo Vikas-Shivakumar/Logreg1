@@ -56,6 +56,7 @@ if st.button("Predict Admission"):
     # Prediction
     if selected_model_name == "Logistic Regression":
         prob = model.predict(input_df)[0]
+        label = "Admit" if prob >= 0.6 else "Reject"
     else:
         if hasattr(model, "predict_proba"):
             prob = model.predict_proba(input_df)[0][1]
